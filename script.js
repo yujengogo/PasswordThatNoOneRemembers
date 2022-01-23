@@ -36,3 +36,5 @@ let passwordOptions = ''
     if (choiceSpecSim.toLowerCase() == 'y'){
         [passwordOptions += keys.specSim]
     }
+
+    console.log(passwordOptions)
