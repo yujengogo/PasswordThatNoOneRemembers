@@ -11,3 +11,14 @@ function passwordGen() {
     var choiceSpecSim = window.prompt("Symbles? Y/N");
 
 }
+
+const key = {
+    loCaseChars :
+    "abcdefghijklmnopqrstuvwxyz",
+    upCaseChars :
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+    numbers :
+    "1234567890",
+    specSim :
+    "!@#$%^&*()" 
+}
