@@ -12,7 +12,7 @@ function passwordGen() {
 
 }
 
-const key = {
+const keys = {
     loCaseChars :
     "abcdefghijklmnopqrstuvwxyz",
     upCaseChars :
@@ -22,3 +22,17 @@ const key = {
     specSim :
     "!@#$%^&*()" 
 }
+
+let passwordOptions = ''
+    if (choiceLoCase.toLowerCase() == 'y'){
+        [passwordOptions += keys.loCaseChars]
+    }
+    if (choiceUpCase.toLowerCase() == 'y'){
+        [passwordOptions += keys.upCaseChars]
+    }
+    if (choiceNumbers.toLowerCase() == 'y'){
+        [passwordOptions += keys.numbers]
+    }
+    if (choiceSpecSim.toLowerCase() == 'y'){
+        [passwordOptions += keys.specSim]
+    }
