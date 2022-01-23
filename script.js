@@ -10,31 +10,47 @@ function passwordGen() {
 
     var choiceSpecSim = window.prompt("Symbles? Y/N");
 
+
+
+    const keys = {
+        loCaseChars :
+        "abcdefghijklmnopqrstuvwxyz",
+        upCaseChars :
+        "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+        numbers :
+        "1234567890",
+        specSim :
+        "!@#$%^&*()" 
+    }
+
+    let passwordOptions = ''
+        if (choiceLoCase.toLowerCase() == 'y'){
+            [passwordOptions += keys.loCaseChars]
+        }
+        if (choiceUpCase.toLowerCase() == 'y'){
+            [passwordOptions += keys.upCaseChars]
+        }
+        if (choiceNumbers.toLowerCase() == 'y'){
+            [passwordOptions += keys.numbers]
+        }
+        if (choiceSpecSim.toLowerCase() == 'y'){
+            [passwordOptions += keys.specSim]
+        }
+
+        console.log(passwordOptions)
+
+        let password = ''
+
+        for (var i = 0; i < choiceLength; i++ ) {
+            var randomChar = passwordOptions[Math.floor(Math.random() * passwordOptions.length)]
+                password += randomChar
+        }
+        console.log(password)
+
+        window.alert(`your password is
+        ${password}`)
+
+
+
+
 }
-
-const keys = {
-    loCaseChars :
-    "abcdefghijklmnopqrstuvwxyz",
-    upCaseChars :
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
-    numbers :
-    "1234567890",
-    specSim :
-    "!@#$%^&*()" 
-}
-
-let passwordOptions = ''
-    if (choiceLoCase.toLowerCase() == 'y'){
-        [passwordOptions += keys.loCaseChars]
-    }
-    if (choiceUpCase.toLowerCase() == 'y'){
-        [passwordOptions += keys.upCaseChars]
-    }
-    if (choiceNumbers.toLowerCase() == 'y'){
-        [passwordOptions += keys.numbers]
-    }
-    if (choiceSpecSim.toLowerCase() == 'y'){
-        [passwordOptions += keys.specSim]
-    }
-
-    console.log(passwordOptions)
