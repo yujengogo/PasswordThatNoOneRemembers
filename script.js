@@ -2,6 +2,10 @@ function passwordGen() {
 
     var choiceLength = window.prompt("Length of the password");
 
+    if (choiceLength <8 || choiceLength > 128) {
+        window.alert("please choose a number between 8-128")
+        return
+    }
     var choiceLoCase = window.prompt("Lower case? Y/N");
 
     var choiceUpCase = window.prompt("Upper case? Y/N");
